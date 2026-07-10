@@ -6,7 +6,7 @@
   <title>LOGIN | SMTOWN &amp;STORE</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="inner-page">
+<body class="inner-page" data-page="login">
   <header class="site-header">
     <div class="notice-strip"><div class="notice-inner"><a href="index.html">SMTOWN &amp;STORE</a><a href="join.html">신규회원 쿠폰 받기</a></div></div>
     <div class="header-main wrap">
@@ -31,7 +31,7 @@
             <input id="login-id" type="text" placeholder="smtown@example.com">
             <label for="login-pw">비밀번호</label>
             <input id="login-pw" type="password" placeholder="Password">
-            <button class="button button-dark" type="button">로그인</button>
+            <button class="button button-dark" type="button" data-login-submit>로그인</button>
             <div class="auth-links"><a href="join.html">회원가입</a><a href="#guest-order">비회원 주문조회</a><a href="login.html">아이디 찾기</a></div>
           </div>
           <div class="guest-panel" id="guest-order">
@@ -42,5 +42,8 @@
       </div>
     </section>
   </main>
+  <script src="script/store.js"></script>
+  <script src="script/common.js"></script>
+  <script src="script/action.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>CART | SMTOWN &amp;STORE</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="inner-page">
+<body class="inner-page" data-page="cart">
   <header class="site-header">
     <div class="notice-strip"><div class="notice-inner"><a href="index.html">SMTOWN &amp;STORE</a><a href="product.html">계속 쇼핑하기</a></div></div>
     <div class="header-main wrap">
@@ -23,7 +23,7 @@
           <h1>장바구니</h1>
           <p>상품 목록, 쿠폰, 배송비, 결제 예정 금액이 함께 보이는 주문 전 화면입니다.</p>
         </div>
-        <div class="cart-board">
+        <div class="cart-board" data-cart-board>
           <article class="cart-line"><img src="images/product-03.jpg" alt="SHINee T-SHIRT SET"><div><strong>POP-UP T-SHIRT SET</strong><span>Option: M / Qty: 1</span></div><b>₩45,000</b></article>
           <article class="cart-line"><img src="images/product-02.jpg" alt="SHINee RANDOM TRADING CARD"><div><strong>RANDOM TRADING CARD</strong><span>Option: RANDOM 3EA SET / Qty: 2</span></div><b>₩12,000</b></article>
           <div class="order-summary">
@@ -39,5 +39,8 @@
       </div>
     </section>
   </main>
+  <script src="script/store.js"></script>
+  <script src="script/common.js"></script>
+  <script src="script/action.js"></script>
 </body>
 </html>

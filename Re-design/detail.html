@@ -6,7 +6,7 @@
   <title>Product Detail | SMTOWN &amp;STORE</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="inner-page is-detail">
+<body class="inner-page is-detail" data-page="detail">
   <header class="site-header">
     <div class="notice-strip"><div class="notice-inner"><a href="index.html">SMTOWN &amp;STORE</a><a href="product.html">상품 목록으로 돌아가기</a></div></div>
     <div class="header-main wrap">
@@ -18,30 +18,34 @@
   <main class="detail-page">
     <section class="detail-hero wrap">
       <a class="back-link" href="product.html">PRODUCT 돌아가기</a>
-      <nav class="breadcrumb"><a href="index.html">HOME</a><span>PRODUCT</span><strong>SHINee</strong></nav>
+      <nav class="breadcrumb"><a href="index.html">HOME</a><span>PRODUCT</span><strong data-detail-breadcrumb>SHINee</strong></nav>
       <div class="detail-layout">
-        <div class="detail-media"><img src="images/product-03.jpg" alt="SHINee POP-UP T-SHIRT SET"></div>
+        <div class="detail-media"><img data-detail-image src="images/product-03.jpg" alt="SHINee POP-UP T-SHIRT SET"></div>
         <div class="detail-summary">
-          <span class="detail-artist">SHINee</span>
-          <h1>2026 SHINee 6th Mini Album [Atmos] POP-UP T-SHIRT SET</h1>
-          <p class="detail-desc">팝업 MD 컬렉션의 티셔츠 세트입니다. 콘서트와 일상에서 모두 입기 좋은 구성입니다.</p>
+          <span class="detail-artist" data-detail-artist>SHINee</span>
+          <h1 data-detail-title>2026 SHINee 6th Mini Album [Atmos] POP-UP T-SHIRT SET</h1>
+          <p class="detail-desc" data-detail-desc>팝업 MD 컬렉션의 티셔츠 세트입니다. 콘서트와 일상에서 모두 입기 좋은 구성입니다.</p>
           <dl class="detail-meta">
-            <div><dt>판매가</dt><dd>₩45,000</dd></div>
+            <div><dt>판매가</dt><dd data-detail-price>₩45,000</dd></div>
             <div><dt>배송</dt><dd>국내배송 / 해외배송 가능</dd></div>
             <div><dt>적립</dt><dd>구매 금액의 1%</dd></div>
           </dl>
-          <div class="option-box"><label for="detail-option">옵션</label><select id="detail-option"><option>M</option><option>L</option><option>XL</option></select></div>
-          <div class="qty-box"><button type="button">-</button><output>1</output><button type="button">+</button></div>
-          <div class="detail-actions"><button type="button" class="button button-dark">장바구니</button><button type="button" class="button button-primary">바로 구매</button><button type="button" class="button button-ghost">WISH</button></div>
-          <p class="detail-notice">예약 판매 상품입니다. 입고 일정에 따라 순차 배송됩니다.</p>
+          <div class="option-box"><label for="detail-option">옵션</label><select id="detail-option" data-detail-option><option>M</option><option>L</option><option>XL</option></select></div>
+          <div class="qty-box" aria-label="수량 선택"><button type="button" data-qty-minus aria-label="수량 감소">-</button><output data-qty>1</output><button type="button" data-qty-plus aria-label="수량 증가">+</button></div>
+          <div class="detail-actions"><button type="button" class="button button-dark" data-add-cart>장바구니</button><button type="button" class="button button-primary" data-buy-now>바로 구매</button><button type="button" class="button button-ghost">WISH</button></div>
+          <p class="detail-notice" data-detail-status>예약 판매 상품입니다. 입고 일정에 따라 순차 배송됩니다.</p>
         </div>
       </div>
     </section>
     <section class="detail-tabs wrap">
-      <div class="tab-buttons"><button class="is-active" type="button">DETAIL</button><button type="button">SHIPPING</button><button type="button">NOTICE</button></div>
-      <article class="tab-panel">
+      <div class="tab-buttons" role="tablist" aria-label="상세 정보 탭">
+        <button class="is-active" type="button" role="tab" aria-selected="true" data-tab="info">DETAIL</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="shipping">SHIPPING</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="notice">NOTICE</button>
+      </div>
+      <article class="tab-panel" data-tab-panel="info">
         <h2>Product Information</h2>
-        <p>공식 SMTOWN &STORE 상품 상세 영역입니다.</p>
+        <p data-detail-long>공식 SMTOWN &STORE 상품 상세 영역입니다.</p>
         <div class="detail-story-grid">
           <figure><img src="images/product-06.jpg" alt="상세 구성 이미지"><figcaption>구성품과 패키지 무드를 한눈에 확인하는 상세 이미지 영역</figcaption></figure>
           <div class="spec-card">
@@ -55,6 +59,23 @@
           </div>
         </div>
       </article>
+      <article class="tab-panel" data-tab-panel="shipping" hidden>
+        <h2>Shipping Guide</h2>
+        <p>예약 판매 상품은 입고 후 순차 배송됩니다. 여러 상품을 함께 주문하면 가장 늦은 입고 일정에 맞춰 발송될 수 있습니다. 국내배송과 해외배송을 모두 지원합니다.</p>
+      </article>
+      <article class="tab-panel" data-tab-panel="notice" hidden>
+        <h2>Notice</h2>
+        <p>상품 이미지는 모니터 환경에 따라 실제 색상과 차이가 있을 수 있으며, 단순 변심 교환/반품은 수령 후 7일 이내 접수 기준을 따릅니다.</p>
+      </article>
+    </section>
+    <section class="section related-items wrap">
+      <div class="section-head compact">
+        <div>
+          <p class="eyebrow">RELATED</p>
+          <h2>함께 보면 좋은 상품</h2>
+        </div>
+      </div>
+      <div class="related-grid" data-related-grid></div>
     </section>
     <section class="section detail-support wrap">
       <div class="support-card">
@@ -67,5 +88,8 @@
       </div>
     </section>
   </main>
+  <script src="script/store.js"></script>
+  <script src="script/common.js"></script>
+  <script src="script/action.js"></script>
 </body>
 </html>

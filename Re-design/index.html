@@ -7,7 +7,7 @@
   <meta name="description" content="SMTOWN &STORE redesign prototype with product detail page.">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main">본문 바로가기</a>
 
   <header class="site-header" data-header>
@@ -87,16 +87,19 @@
 
     <section class="category-band" aria-label="카테고리">
       <div class="wrap category-list">
-        <a href="#celeb">BoA</a>
-        <a href="#celeb">TVXQ!</a>
-        <a href="#celeb">SUPER JUNIOR</a>
-        <a href="#celeb">GIRLS' GENERATION</a>
-        <a href="#celeb">SHINee</a>
-        <a href="#celeb">EXO</a>
-        <a href="#celeb">Red Velvet</a>
-        <a href="#celeb">NCT</a>
-        <a href="#celeb">aespa</a>
-        <a href="#celeb">RIIZE</a>
+        <a href="celeb.html?group=BoA">BoA</a>
+        <a href="celeb.html?group=KANGTA">KANGTA</a>
+        <a href="celeb.html?group=TVXQ!">TVXQ!</a>
+        <a href="celeb.html?group=Super Junior">SUPER JUNIOR</a>
+        <a href="celeb.html?group=Girls' Generation">GIRLS' GENERATION</a>
+        <a href="celeb.html?group=SHINee">SHINee</a>
+        <a href="celeb.html?group=EXO">EXO</a>
+        <a href="celeb.html?group=Red Velvet">Red Velvet</a>
+        <a href="celeb.html?group=NCT">NCT</a>
+        <a href="celeb.html?group=aespa">aespa</a>
+        <a href="celeb.html?group=RIIZE">RIIZE</a>
+        <a href="celeb.html?group=NAEVIS">NAEVIS</a>
+        <a href="celeb.html?group=Hearts2Hearts">Hearts2Hearts</a>
       </div>
     </section>
 
@@ -137,14 +140,14 @@
           <h2>카테고리별로 빠르게 찾는 공식 MD.</h2>
         </div>
         <div class="category-grid">
-          <a href="#new-items">MUSIC</a>
-          <a href="#new-items">CD / DVD</a>
-          <a href="#new-items">PHOTO</a>
-          <a href="#new-items">CONCERT</a>
-          <a href="#new-items">LIVING</a>
-          <a href="#new-items">BEAUTY</a>
-          <a href="#new-items">STATIONERY</a>
-          <a href="#new-items">CUSTOMIZING</a>
+          <a href="product.html?cat=music">MUSIC</a>
+          <a href="product.html?cat=music">CD / DVD</a>
+          <a href="product.html?cat=photo">PHOTO</a>
+          <a href="product.html?cat=concert">CONCERT</a>
+          <a href="product.html?cat=living">LIVING</a>
+          <a href="product.html?cat=beauty">BEAUTY</a>
+          <a href="product.html?cat=living">STATIONERY</a>
+          <a href="product.html?cat=all">CUSTOMIZING</a>
         </div>
       </div>
     </section>
@@ -159,6 +162,7 @@
             <span><b data-days>00</b>Days</span>
             <span><b data-hours>00</b>Hours</span>
             <span><b data-minutes>00</b>Min</span>
+            <span><b data-seconds>00</b>Sec</span>
           </div>
           <a class="button button-dark" href="#new-items">특가 상품 보기</a>
         </div>
@@ -346,6 +350,8 @@
     </div>
   </footer>
 
+  <script src="script/store.js"></script>
+  <script src="script/common.js"></script>
   <script src="script/action.js"></script>
 </body>
 </html>
