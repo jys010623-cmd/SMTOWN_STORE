@@ -521,32 +521,34 @@
      그룹·유닛·솔로 모두 데뷔순(오래된 순)으로 배치. 유닛/솔로는 {n:이름, y:데뷔연도}
      (SM 공식/위키 및 각 멤버 솔로 데뷔일 기준, 2026.07.10 시점) */
   var CELEB_GROUPS = [
-    { name: "BoA", label: "ICON", year: 2000, color: "#6A5ACD", desc: "솔로 아카이브와 기념 굿즈 라인.", units: [], solos: [] },
-    { name: "KANGTA", label: "ICON", year: 2001, color: "#4A6FA5", desc: "솔로 아카이브와 기념 상품 라인.", units: [], solos: [] },
-    { name: "TVXQ!", label: "STORE", year: 2003, color: "#CE0E2D", desc: "음반과 공식 굿즈를 함께 탐색.",
+    { name: "BoA", label: "SOLO", year: 2000, color: "#6A5ACD", desc: "솔로 디스코그래피와 기념 굿즈를 모았습니다.", units: [], solos: [] },
+    { name: "KANGTA", label: "SOLO", year: 2001, color: "#4A6FA5", desc: "보컬 아카이브 중심의 솔로 컬렉션입니다.", units: [], solos: [] },
+    { name: "TVXQ!", label: "GROUP", year: 2003, color: "#CE0E2D", desc: "동방신기 음반과 투어 굿즈를 함께 탐색합니다.",
       units: [], solos: [{ n: "U-KNOW", y: 2019 }, { n: "MAX", y: 2020 }] },
-    { name: "Super Junior", label: "CLASSIC", year: 2005, color: "#0F52BA", desc: "콘서트 MD와 응원봉 아카이브.",
+    { name: "Super Junior", label: "GROUP", year: 2005, color: "#0F52BA", desc: "공연 MD와 응원봉 굿즈가 강한 컬렉션입니다.",
       units: [{ n: "SUPER JUNIOR-D&E", y: 2011 }],
       solos: [{ n: "KYUHYUN", y: 2014 }, { n: "YESUNG", y: 2016 }, { n: "RYEOWOOK", y: 2016 }, { n: "DONGHAE", y: 2021 }] },
-    { name: "Girls' Generation", label: "CLASSIC", year: 2007, color: "#F4699C", desc: "기념 앨범과 공식 굿즈 라인.",
+    { name: "Girls' Generation", label: "GROUP", year: 2007, color: "#F4699C", desc: "소녀시대 앨범과 기념 굿즈를 모았습니다.",
       units: [{ n: "Oh!GG", y: 2018 }],
       solos: [{ n: "TAEYEON", y: 2015 }, { n: "TIFFANY", y: 2016 }, { n: "HYOYEON", y: 2016 }, { n: "SEOHYUN", y: 2017 }, { n: "YURI", y: 2018 }, { n: "YOONA", y: 2022 }] },
-    { name: "SHINee", label: "BEST", year: 2008, color: "#1EC9C9", desc: "Atmos 팝업 MD와 포토 상품.",
+    { name: "SHINee", label: "GROUP", year: 2008, color: "#1EC9C9", desc: "팝업 MD와 포토 상품을 중심으로 구성했습니다.",
       units: [],
       solos: [{ n: "TAEMIN", y: 2014 }, { n: "JONGHYUN", y: 2015 }, { n: "KEY", y: 2018 }, { n: "ONEW", y: 2018 }, { n: "MINHO", y: 2022 }] },
-    { name: "EXO", label: "MD", year: 2012, color: "#C0002F", desc: "콘서트 MD와 시즌 상품 모음.",
+    { name: "f(x)", label: "GROUP", year: 2009, color: "#9B7BFF", desc: "실험적인 앨범 무드의 아카이브 굿즈입니다.",
+      units: [], solos: [{ n: "LUNA", y: 2016 }] },
+    { name: "EXO", label: "GROUP", year: 2012, color: "#C0002F", desc: "콘서트 MD와 멤버별 솔로 라인을 함께 봅니다.",
       units: [{ n: "EXO-SC", y: 2019 }],
       solos: [{ n: "LAY", y: 2016 }, { n: "CHEN", y: 2019 }, { n: "BAEKHYUN", y: 2019 }, { n: "SUHO", y: 2020 }, { n: "KAI", y: 2020 }, { n: "D.O.", y: 2021 }, { n: "XIUMIN", y: 2022 }, { n: "CHANYEOL", y: 2024 }] },
-    { name: "Red Velvet", label: "BEST", year: 2014, color: "#E4002B", desc: "스테디셀러와 포토 카테고리 연결.",
+    { name: "Red Velvet", label: "GROUP", year: 2014, color: "#E4002B", desc: "앨범 콘셉트별 포토 굿즈를 찾기 좋습니다.",
       units: [{ n: "Red Velvet - IRENE & SEULGI", y: 2020 }],
       solos: [{ n: "WENDY", y: 2021 }, { n: "JOY", y: 2021 }, { n: "SEULGI", y: 2022 }] },
-    { name: "NCT", label: "HOT", year: 2016, color: "#86C232", desc: "유닛과 솔로가 가장 많은 대형 프로젝트.",
+    { name: "NCT", label: "PROJECT", year: 2016, color: "#86C232", desc: "유닛과 솔로 라인이 가장 넓은 프로젝트입니다.",
       units: [{ n: "NCT U", y: 2016 }, { n: "NCT 127", y: 2016 }, { n: "NCT DREAM", y: 2016 }, { n: "WayV", y: 2019 }, { n: "NCT DoJaeJung", y: 2023 }, { n: "NCT WISH", y: 2024 }, { n: "NCT JNJM", y: 2026 }],
       solos: [{ n: "TAEYONG", y: 2023 }, { n: "TEN", y: 2024 }, { n: "DOYOUNG", y: 2024 }, { n: "JAEHYUN", y: 2024 }, { n: "YUTA", y: 2024 }, { n: "MARK", y: 2025 }, { n: "HAECHAN", y: 2025 }] },
-    { name: "aespa", label: "PICK", year: 2020, color: "#C724B1", desc: "컴백 시즌과 이벤트 상품을 강조하는 그룹.", units: [], solos: [] },
-    { name: "RIIZE", label: "DROP", year: 2023, color: "#1E5AE9", desc: "신규 발매와 예약 판매 진입 그룹.", units: [], solos: [] },
-    { name: "NAEVIS", label: "aeVERSE", year: 2024, color: "#00C2D1", desc: "2024년 데뷔한 버추얼 아티스트.", units: [], solos: [] },
-    { name: "Hearts2Hearts", label: "NEW", year: 2025, color: "#FF4D8D", desc: "2025년 데뷔한 신인 그룹.", units: [], solos: [] }
+    { name: "aespa", label: "GROUP", year: 2020, color: "#C724B1", desc: "컴백 콘셉트와 시즌 굿즈가 돋보입니다.", units: [], solos: [] },
+    { name: "RIIZE", label: "GROUP", year: 2023, color: "#1E5AE9", desc: "신규 발매와 예약 판매 상품을 빠르게 봅니다.", units: [], solos: [] },
+    { name: "NAEVIS", label: "VIRTUAL", year: 2024, color: "#00C2D1", desc: "버추얼 아티스트 굿즈 라인을 확인합니다.", units: [], solos: [] },
+    { name: "Hearts2Hearts", label: "GROUP", year: 2025, color: "#FF4D8D", desc: "신인 그룹의 첫 컬렉션을 모았습니다.", units: [], solos: [] }
   ];
 
   function initCeleb() {
