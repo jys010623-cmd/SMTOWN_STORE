@@ -80,13 +80,14 @@
       });
     });
 
-    /* CELEB PICK 컬렉션 카드 클릭 → 상품 목록으로 이동 */
+    /* CELEB PICK 컬렉션 카드 클릭 → 지정된 목록으로 이동 */
     document.querySelectorAll(".feature-cards article").forEach(function (card) {
-      card.setAttribute("role", "link");
-      card.setAttribute("tabindex", "0");
-      card.addEventListener("click", function () { location.href = "product.html"; });
+      if (!card.getAttribute("role")) card.setAttribute("role", "link");
+      if (!card.hasAttribute("tabindex")) card.setAttribute("tabindex", "0");
+      var dest = card.getAttribute("data-href") || "product.html";
+      card.addEventListener("click", function () { location.href = dest; });
       card.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); location.href = "product.html"; }
+        if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); location.href = dest; }
       });
     });
 
@@ -399,6 +400,22 @@
     if (!btn) return;
     var checkboxes = document.querySelectorAll(".consent-list input[type='checkbox']");
     var status = ensureStatus(btn);
+
+    /* 관심 아티스트 칩 선택(다중 선택 토글) */
+    var chips = document.querySelectorAll(".artist-choice-grid span");
+    chips.forEach(function (chip) {
+      chip.setAttribute("role", "button");
+      chip.setAttribute("tabindex", "0");
+      chip.setAttribute("aria-pressed", "false");
+      function toggle() {
+        var on = chip.classList.toggle("is-selected");
+        chip.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+      chip.addEventListener("click", toggle);
+      chip.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); toggle(); }
+      });
+    });
 
     btn.addEventListener("click", function () {
       /* 첫 두 개(만 14세 이상 / 약관 동의)를 필수로 검증 */
